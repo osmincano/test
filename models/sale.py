@@ -5,5 +5,7 @@ from odoo import api, models
 
 
 class SaleOrder(models.Model):
-    _name = 'sale.order.xetechs'
     _inherit = 'sale.order'
+
+    telefono = fields.Char(string='Telefono', help="Numero de telefono.")
+    cliente = fields.Many2one('res.partner',string='Cliente destino')
