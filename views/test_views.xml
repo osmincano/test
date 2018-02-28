@@ -2,6 +2,11 @@
 <odoo>
 
 
+          <!-- Top menu item -->
+          <menuitem
+              id="test_menu_root"
+              name="Test"
+              sequence="77"/>
 
   <record id="view_test_tree" model="ir.ui.view">
       <field name="name">test.test.tree</field>
@@ -52,7 +57,7 @@
       </field>
   </record>
 
-      <menuitem name="Test Orders" parent="menu_root" id="test_order_menu" sequence="2"/>
+      <menuitem name="Test Orders" parent="test_menu_root" id="test_order_menu" sequence="2"/>
       <menuitem action="action_orders_test" parent="test_order_menu" id="menu_test_order"/>
 
 </odoo>
