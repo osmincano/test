@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+  <!-- Top menu item -->
+
+  <menuitem id="test_menu_root"
+      name="Test"
+      web_icon="sale,static/description/icon.png"
+      active="False"
+      sequence="8"/>
+
+  <menuitem id="test_order_menu"
+        name="Orders"
+        parent="test_menu_root"
+        sequence="2"/>
+
+  <record id="view_test_tree" model="ir.ui.view">
+      <field name="name">test.test.tree</field>
+      <field name="model">test.test</field>
+      <field name="priority">2</field>
+      <field name="arch" type="xml">
+          <tree string="Test Orders">
+
+              <field name="telefono"/>
+              <field name="cliente"/>
+
+          </tree>
+      </field>
+  </record>
+
+
+  <record id="view_test_form" model="ir.ui.view">
+      <field name="name">test.test.form</field>
+      <field name="model">test.test</field>
+      <field name="arch" type="xml">
+          <form string="Test Order">
+
+            <sheet>
+              <field name="telefono"/>
+              <field name="cliente"/>
+            </sheet>
+
+          </form>
+      </field>
+  </record>
+
+
+  <record id="action_orders_test" model="ir.actions.act_window">
+      <field name="name">Test Orders</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">test.test</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="context">{}</field>
+      <field name="domain"></field>
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+              Create a Order Test.
+          </p><p>
+              Once the quotation is confirmed, it becomes a sales order.
+              You'll be able to invoice it and collect payments.
+              From the <i>Sales Orders</i> menu, you can track delivery
+              orders or services.
+          </p>
+      </field>
+  </record>
+
+  <menuitem id="menu_test_order"
+      name="Orders Test"
+      action="action_orders_test"
+      parent="test_order_menu"
+      sequence="2"/>
+
+</odoo>
