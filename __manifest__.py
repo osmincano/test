@@ -11,9 +11,9 @@ Modulo de Ejemplo.
 """,
     "init_xml" : [],
     "demo_xml" : [],
-    "data": ["views/sale_views.xml",
-             "views/res_partner_view.xml",
-             "views/test_views.xml"],
+    "data": ["views/test_views.xml",
+             "views/sale_views.xml",
+             "views/res_partner_view.xml"],
     "active": False,
     "installable": True
 }
