@@ -13,7 +13,9 @@ Modulo de Ejemplo.
     "demo_xml" : [],
     "data": ["views/test_views.xml",
              "views/sale_views.xml",
-             "views/res_partner_view.xml"],
+             "views/res_partner_view.xml",
+             "report/test_report.xml",
+             "report/test_report_templates.xml"],
     "active": False,
     "installable": True
 }
